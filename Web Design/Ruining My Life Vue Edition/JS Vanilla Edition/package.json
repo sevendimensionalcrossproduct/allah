@@ -1,0 +1,33 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.1",
+  "description": "simple todo app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "serna",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^5.5.2",
+    "vue-cli": "^2.9.6",
+    "vue-router": "^4.4.5",
+    "vue3-sfc-loader": "^0.9.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@vue/compiler-sfc": "^3.4.31",
+    "@webpack-cli/generators": "^3.0.7",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0",
+    "vue": "^3.5.12",
+    "vue-loader": "^17.4.2",
+    "vue-loader-plugin": "^1.3.0",
+    "vue-template-compiler": "^2.7.16",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

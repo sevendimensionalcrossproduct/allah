@@ -1,0 +1,85 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 1000px;
+  height: 600px;
+  border-radius: 60px;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  border-radius: 0px 60px 60px 0px;
+  left: 50%;
+  background-color: #fff; 
+  z-index: -1;
+  
+}
+
+.hd{
+  position: absolute;
+  width: 100%;
+  transform: translateX(25%);
+}
+
+.butts{
+  position: absolute;
+  display: flex;
+  width: 20%;
+  height: 100%;
+  top: 12%;
+  transform: translateX(125%);
+  flex-direction: column;
+  margin-bottom: 5vh;
+}
+
+button{
+    text-shadow: black 2px 1px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    top: 45vh;
+    padding: 15px 35px;
+    color: white;
+    background-image: linear-gradient(45deg,
+    rgb(0, 140, 255),
+    rgb(146, 1, 146),
+    rgb(247, 83, 83),
+    rgb(255, 136, 0));
+    border-radius: 25px;
+    border: none;
+    transition: all 1s;
+    outline: 1px solid;
+
+}
+
+.users{
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  left: 0%;
+  overflow:auto;
+
+}
+
+#output{
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: auto;
+  transform: translateX(20svh);
+}

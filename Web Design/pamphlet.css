@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: radial-gradient(rgb(44, 43, 43),black
+    );
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: relative;
+    height: 400px;
+    width: 300px;
+    background-image: radial-gradient(beige,rgba(230, 205, 136, 0.658));
+    transition: 0.5s;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.inside{
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pamphlet{
+    top: 40px;
+    text-align: center;
+    padding: 20px;
+    color: rgb(105, 21, 21);
+    text-shadow: rgb(179, 177, 177) 2px 1px;
+}
+.pamphlet h1{
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.pamphlet p{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pamphlet a{
+    margin-top: 20px;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(105, 21, 21);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: rgb(179, 177, 177) 2px 1px;
+    border: 2px solid;
+    border-image: linear-gradient(45deg, rgb(255, 0, 0), rgb(90, 18, 18)) 1;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.symbol{
+    background-image: radial-gradient(red, rgb(90, 18, 18));
+    transition: 0.5s;
+}
+
+.symbol h2{
+    font-size: 120px;
+    color: white;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card:hover .symbol{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    top: 30px;
+    left: 40%;
+    transition: 0.5s;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover .symbol h2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    place-items: center;
+    transition: 0.5s;
+}

@@ -1,0 +1,5 @@
+**/*.out
+**/*.dll
+**/*.exe
+bjarne/𐼽.cpp
+**/node_modules/

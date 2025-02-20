@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Animation</title>
+</head>
+<body style="background-color: black;">
+
+<svg fill="none" height="264" role="img" viewBox="0 0 891 264" width="891" data-lines="true">
+  <g>
+    <path d="M412 263.5L412 184" stroke="white" stroke-opacity="0.1" style="transform: scale(-1); transform-origin: 412px 223.75px 0px;" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px" transform-origin="412px 223.75px"></path>
+    <path d="M412 263.5L412 184" stroke="url(#pink-pulse-1)" stroke-linecap="round" stroke-width="2"></path>
+  </g>
+
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="pink-pulse-1" x1="" y1="" x2="" y2="">
+      <stop stop-color="#FF4A81" stop-opacity="0"></stop>
+      <stop offset="0.030" stop-color="#FF4A81"></stop>
+      <stop offset="0.27" stop-color="#DF6CF6"></stop>
+      <stop offset="1" stop-color="#0196FF" stop-opacity="0"></stop>
+    </linearGradient>
+  </defs>
+</svg>
+
+<script>
+  const gradient = document.getElementById('pink-pulse-1');
+  let animationProgress = 0;
+
+  function animateGradient() {
+    const x1 = 400 + 10 * animationProgress;
+    const y1 = 83 +  animationProgress ;
+
+    const x2 = 350  + 50 * animationProgress;
+    const y2 = 133.75  + animationProgress;
+
+    gradient.setAttribute('x1', x1);
+    gradient.setAttribute('y1', y1);
+    gradient.setAttribute('x2', x2);
+    gradient.setAttribute('y2', y2);
+
+    animationProgress += 0.1; // Adjust this value for the desired animation speed
+
+    if (animationProgress >= 7) {
+      animationProgress = 0;
+    }
+  }
+
+  // Start the animation loop
+  setInterval(animateGradient, 100); // Adjust the interval for smoother or faster animation
+</script>
+
+</body>
+</html>

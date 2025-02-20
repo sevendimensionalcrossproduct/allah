@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>2ndpage</title>
+  </head>
+  <body>
+    <header>This is the second page!!</header>
+    <button id="butt">surprise!</button>
+    <main>askdakslflksdf</main>
+    <footer>foot</footer>
+
+    <script>
+      document.getElementById("butt").addEventListener("click", function() {
+        fetch("/second/third")
+          .then(response => response.text())
+          .then(data => {
+            document.body.innerHTML = data;
+          })
+      });
+    </script>
+  </body>
+</html>
