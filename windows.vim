@@ -404,11 +404,32 @@ lspconfig.purescriptls.setup {
     capabilities = capabilities
   }
 
-  require('lspconfig')['ts_ls'].setup { --this is required for vue shit
-    cmd = { "C:\\Users\\ana_i\\AppData\\Roaming\\npm\\typescript-language-server.cmd", "--stdio" },
-      filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
-    capabilities = capabilities
-  }
+  require('lspconfig')['denols'].setup {
+  on_attach = on_attach,
+  root_dir = require'lspconfig'.util.root_pattern("deno.json", "deno.jsonc"),
+  filetypes = {
+    'javascript',
+    'javascriptreact',
+    'javascript.jsx',
+    'typescript',
+    'typescriptreact',
+    'typescript.tsx',
+    'markdown',
+  },
+  init_options = {
+    config = './deno.jsonc',
+    lint = true,
+  },
+}
+
+  require('lspconfig')['ts_ls'].setup { 
+  cmd = { "C:\\Users\\Giga\\AppData\\Roaming\\npm\\typescript-language-server.cmd", "--stdio" },
+  on_attach = on_attach,
+  filetypes = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+  capabilities = capabilities,
+  root_dir = require'lspconfig'.util.root_pattern("package.json"),
+  single_file_support = false,  -- This disables single file support for the TypeScript language server
+}
 
    require('lspconfig')['html'].setup {
     capabilities = capabilities
@@ -470,7 +491,7 @@ require('lspconfig')['sqlls'].setup{
        filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' },
        init_options = {
       typescript = {
-      tsdk = '/home/serna/node_modules/typescript/lib/'
+      tsdk = "C:\\Users\\Giga\\AppData\\Roaming\\npm\\node_modules\\typescript\\lib"
       -- Alternative location if installed as root:
       -- tsdk = '/usr/local/lib/node_modules/typescript/lib'
     }
